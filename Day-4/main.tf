@@ -9,6 +9,6 @@ resource "aws_instance" "terraform-1" {
 }
 
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "karthik-s3-demo-xyz"
+  bucket = "karthik-cloudcmk-s3-qwerty"
 
 }
