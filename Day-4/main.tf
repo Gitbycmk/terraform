@@ -7,3 +7,8 @@ resource "aws_instance" "terraform-1" {
   ami = "ami-0220d79f3f480ecf5"
 
 }
+
+resource "aws_s3_bucket" "s3_bucket" {
+  bucket = karthik-s3-demo-bucket
+
+}
