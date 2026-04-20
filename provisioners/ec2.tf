@@ -8,8 +8,15 @@ resource "aws_instance" "terraform" {
     }
 
     provisioner "local-exec" {
-      command = "${self}"
+      command = "echo ${self.private_ip} > inventory"
+      on_failure = continue
     }
+
+    provisioner "local-exec" {
+      command = "echo Instance is Destroyed"
+      when = destroy
+    }
+
 
 }
 
